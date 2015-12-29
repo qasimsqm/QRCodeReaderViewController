@@ -243,6 +243,7 @@
 
   self.cancelButton                                       = [[UIButton alloc] init];
   _cancelButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [_cancelButton setBackgroundColor:[UIColor colorWithRed:38.0/255 green:146.0/255 blue:114.0/255 alpha:1.0]];
   [_cancelButton setTitle:cancelButtonTitle forState:UIControlStateNormal];
   [_cancelButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
   [_cancelButton addTarget:self action:@selector(cancelAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -258,7 +259,7 @@
   [self.view addConstraints:
    [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_cameraView]|" options:0 metrics:nil views:views]];
   [self.view addConstraints:
-   [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[_cancelButton]-|" options:0 metrics:nil views:views]];
+   [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_cancelButton]|" options:0 metrics:nil views:views]];
 
   id topLayoutGuide = self.topLayoutGuide;
   
